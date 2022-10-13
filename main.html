@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .fixed-top {
+            position: sticky;
+            background-color: white;
+            /* box-shadow: 10px; */
+        }
+        .col {
+            color: grey;
+            font-weight: bold;
+        }
+        .navbg {
+            background-color: white;
+            box-shadow: 0 0 1rem rgb(237, 213, 213);
+        }
+        .bg {
+            background-image: url("https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 85vh;
+        }
+        .bgs {
+            background-image: url("https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1497436072909-60f360e1d4b1.jpg");
+            height: 75vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bt {
+            letter-spacing: .3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .btn-light {
+            background-color: white;
+            border-color: rgb(53, 135, 207);
+        }
+        .padding {
+            padding-top: 10%;
+            padding-left: 3%;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+        .text-serif {
+            font-family: "Playfair Display",serif !important;
+        }
+        .hover-animate :hover {
+                transition: all 0.2s ease-in-out;
+                transition-property: all;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in-out;
+                transition-delay: 0s;
+        }
+
+        #backg {
+            background-color: azure;
+        }
+
+        @media(max-width:964px) {
+            #mar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <div class="container-fluid navbg" >
+            <nav class=" navbar navbar-expand-lg pt-3 ">
+                <div class="container-fluid navbar-header">
+                    <a href="#" class="navbar-brand"><img
+                            src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/logo.svg" style="height: 35px;" alt="brand"></a>
+                    <div class="container  d-none-ms me-2 " id="mar">
+                        <form class="d-flex ">
+                            <input class="form-control me-1 bg-secondary-light " style="width: 25%; " type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="collapse navbar-collapse me-5" id="mainNavBar">
+                        <ul class=" navbar-nav ">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle col" id="dropdown" data-bs-toggle="dropdown"
+                                    aria-expanded="false" style="color: black;">Home</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown">
+                                    <li><a href="#" class="dropdown-item">Rooms</a></li>
+                                    <li><a href="#" class="dropdown-item">Restaurants</a></li>
+                                    <li><a href="#" class="dropdown-item">Travel</a></li>
+                                    <li><a href="#" class="dropdown-item">Real Estate</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item "><a class="nav-link col" href="#">Templates</a></li>
+                            <li class="nav-item "><a class="nav-link  col" href="#">Contact</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle col" id="dropdown" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Docs</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown">
+                                    <li><a href="#" class="dropdown-item disabled">DOCUMENTATION</a></li>
+                                    <li><a href="#" class="dropdown-item">Introduction</a></li>
+                                    <li><a href="#" class="dropdown-item">Directory structure</a></li>
+                                    <li><a href="#" class="dropdown-item">Gulp</a></li>
+                                    <li><a href="#" class="dropdown-item">Customizing CSS</a></li>
+                                    <li><a href="#" class="dropdown-item">Credits</a></li>
+                                    <li><a href="#" class="dropdown-item">Changelog</a></li>
+                                    <li><a href="#" class="dropdown-item disabled">Components</a></li>
+                                    <li><a href="#" class="dropdown-item">Bootstrap</a></li>
+                                    <li><a href="#" class="dropdown-item">Theme</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link col" href="login.html">SignIn</a></li>
+                            <li class="nav-item"><a class="nav-link col" href="#">SignUp</a></li>
+                            <li class="nav-item">
+                                <button class="btn bg-primary btn-outline-success" style="color:white;width: 175%;"
+                                    type="submit">
+                                    ADD A LISTING
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <section>
+        <div class="bg">
+            <div class="container pt-5 ">
+                <div class="padding">
+                    <p class="subtitle letter-spacing-4 mb-2  text-shadow " style="color:rgba(251, 8, 202, 0.801) ;">THE BEST
+                        HOLIDAY EXPERIENCE</p>
+                    <h1 class="display-2 fw-bold text-shadow " style="color: white;">Stay like a local</h1>
+                    <div class="search-bar mt-5">
+                        <form action="#" class="d-flex">
+                            <div class="row">
+                                <div class="col-lg-3 form-group" style="width: 400px;">
+                                    <input class="form-control " style="border-right: 1px solid grey;" type="text" name="search"
+                                        placeholder="what are you searching for?">
+                                </div>
+                                <div class="col-lg-2 form-group">
+                                    <input class="form-control" type="text" name="search" placeholder="Location">
+                                </div>
+                                <div class="col-lg-2 form-group mt-2 ">
+                                    <select name="Categories" id="">
+                                        <option value="Restaurant">Restaurant</option>
+                                        <option value="Hotels">Hotels</option>
+                                        <option value="Cafes">Cafes</option>
+                                        <option value="Garages">Garages</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 form-group">
+                                    <button type="search" class="btn btn-primary btn-outline-success" style="color:white;">
+                                        SEARCH
+                                    </button>
+                                </div>
+        
+                            </div>
+                    </div>
+        
+                    </form>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="backg">
+            <div class="text-center mt-5 pt-5">
+                <p class="subtitle text-secondary " style="color:violet ;">ONE-OF-A-KIND-VACATION-RENTALS</p>
+                <h2 class="mb-5">Booking with us is easy</h2>
+            </div>
+            <div class="container mt-5 ms-5">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <center><img style="padding-top:2%;" src="logow.jfif" width="75px" height="75px">
+                            <br><br>
+                            <h5>Find the perfect rental</h5>
+                        </center>
+                        <p class="ps-3">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed
+                            in his bed in
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <center><img src="card.jpg" width="75px" height="75px">
+                            <br><br>
+                            <h5>Book with confidence</h5>
+                        </center>
+                        <p class="ps-3">The bedding was hardly able to cover it and seemed ready to slide off any moment.
+                            His many
+                            legs, pit</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <center><img src="heart.jfif" width="75px" height="75px">
+                            <br><br>
+                            <h5>Enjoy your vacation</h5>
+                        </center>
+                        <p class="ps-3">His room, a proper human room although a little too small, lay peacefully between
+                            its four
+                            familiar</p>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section > 
+        <div class=" container pt-5 ps-5">
+            <div>
+                <p class="subtitle fs-6 text-primary ">STAY AND EAT LIKE A LOCAL</p>
+                <h2>Our guides</h2>
+            </div><br><br>
+            <div class="row">
+                <div class="card  hover animate col-lg-3">
+                    <img src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/new-york.jpg" alt="newyork">
+                    <div class="card-body overlay-content">
+                        <p class="card-title fs-2">New York </p>
+                        <p class="card-text fs-5">The Big Apple</p>
+                    </div>
+        
+                </div>
+                <div class="card  hover animate col-lg-3">
+                    <img src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/paris.jpg" alt="Card-image">
+                    <div class="card-body overlay-content">
+                        <p class="card-title fs-2">Paris</p>
+                        <p class="card-text fs-5">Artist capital of Europe</p>
+                    </div>
+                </div>
+                <div class="card  hover animate col-lg-3">
+                    <img src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/barcelona.jpg" alt="Card-image" >
+                    <div class="card-body overlay-content">
+                        <p class="card-title fs-2">Barcelona </p>
+                        <p class="card-text fs-5">Dalí, Gaudí, Barrio Gotico</p>
+                    </div>
+        
+                </div>
+                <div class="card  hover animate col-lg-3">
+                    <img src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/prague.jpg" alt="newyork">
+                    <div class="card-body overlay-content">
+                        <p class="card-title fs-2">Prague </p>
+                        <p class="card-text fs-5">City of hundred towers</p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section class="bgs">
+        <div class="container pt-5  mt-5">
+            <div class="py-lg-5 ps-2" >
+                <h3 class="pt-5  display-3 fw-bold text-serif" style="color:white;">Ready for your next holidays?</h3><br>
+                <a href="#" class="btn bt btn-light btn-outline">Get started</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div style="background-color: rgb(181, 181, 236);">
+            <p class="col-lg-4 text-center">&copy;2022 ,Directory ,All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
